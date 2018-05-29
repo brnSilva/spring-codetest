@@ -7,6 +7,9 @@ O projeto modelo tem a ideal de mostrar diversas práticas para ajudar o desenvo
 ### Docker
 [Link to Installation Section](https://www.docker.com/)
 
+### Docker Compose
+[Link to Installation Secion](https://docs.docker.com/compose/install/#install-compose)
+
 #### Mac OSX
 [Link to Installation Section on Mac](https://docs.docker.com/installation/mac/)
 
