@@ -1,4 +1,4 @@
-Projeto modelo para avaliação técnica da redspark para spring developers
+Projeto modelo para avaliação técnica de desenvolvedores spring - redspark
 ========
 O projeto modelo tem a ideal de mostrar diversas práticas para ajudar o desenvolvedor na tomada de decisão.
 
@@ -22,31 +22,6 @@ IP=$(boot2docker ssh ip addr show eth1 |sed -nEe 's/^[ \t]*inet[ \t]*([0-9.]+)\/
 IP=$(docker-machine ip default); sudo bash -c "echo '' >> /etc/hosts; echo $IP docker >> /etc/hosts"
 
 ```
-### Fig
-[Link to Installation Section](http://www.fig.sh/install.html)
-
-## How to Run
-
-| Command   |      Description      |
-|----------|:-------------:|
-fig up | It will download the images and start the containers necessary to start the application
-fig stop | It will stop de containers but will keep the files on your system
-fig rm | It will remove the containers files from your system but will keep the images
-
-***
-* If you want to run:
-```bash
-$ boot2docker up
-$ fig up
-```
-
-* If you want to stop, to do some change in your code or free some memory, run `fig stop`.
-* If you want to start fresh, with a clean enviroment, run:
-```bash
-$ fig stop
-$ fig rm
-$ fig up
-```
 
 # Build
 
@@ -64,10 +39,10 @@ java -jar ~/.m2/repository/org/projectlombok/lombok/1.16.2/lombok-1.16.2.jar
 ```
 After run, it's necessary to specify your current Eclipse installation, attention to select de link 'eclipse' in Eclipse installation folder and click Install.
 
-## Front-End
-
-## Back-End
-mvn clean install -f server/pom
+## Back-End build and run
+mvn clean install -f server/pom && sudo docker-compose up
 
 ## Artifacts
 server/target/spring-codetest.jar
+
+
